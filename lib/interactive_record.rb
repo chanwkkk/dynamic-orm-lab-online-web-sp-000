@@ -9,6 +9,7 @@ class InteractiveRecord
 
   def self.column_names
     PRAGMA table_info ('#{self.table_name}')
+    binding.pry
   end
 
 end
