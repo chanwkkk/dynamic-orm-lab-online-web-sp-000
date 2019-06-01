@@ -10,7 +10,7 @@ class InteractiveRecord
 
   def self.column_names
     sql="PRAGMA table_info ('#{table_name}')"
-
+    column_names=[]
     table_info = DB[:conn].execute(sql)
     binding.pry
     table_info.each do |column|
